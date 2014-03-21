@@ -1,0 +1,47 @@
+{% extends "index.html" %} 
+
+{% block content %}
+<h1>Alojamentos</h1>
+<div class="row3">
+	<div class="span"></div>
+	<div class="span">
+		<a href="/alojamentos/adicionar_alojamento" class="btn btn-default" type="button">Adicionar
+			alojamento</a>
+	</div>
+</div>
+{% if latest_alojamentos_list%} 
+{% for alojamento in latest_alojamentos_list %}
+<div class="row-fluid">
+
+	<div class="span6 offset3">
+		<div class="well">
+			<p>
+				<a href="/alojamentos/{{ alojamento.id }}/">
+				Descrição: {{ alojamento.descricao}}</a><br>
+				Bairro: {{ alojamento.bairro}}<br>
+				Quartos: {{ alojamento.quartos}}<br>
+				Sala: {{ alojamento.sala}}<br>
+				Casa de banho: {{ alojamento.wc}}<br>
+				Renda: {{ alojamento.renda}}<br>
+				Animais: {{ alojamento.animais}}<br>
+				Género: {{ alojamento.genero}}<br>
+				Disponível em: {{ alojamento.mes}}<br>
+				<br> 
+				Anunciante: {{alojamento.userName.user}}
+			</p>
+		</div>
+	</div>
+</div>
+{% endfor %} 
+{% else %}
+<p>Não há alojamentos disponíveis!</p>
+{% endif %} 
+{% endblock %}
+{% block footer %}
+<br>
+<br>
+<br>
+<div class="span2">
+	<a href="/accounts/signout" class="btn btn-danger">Logout</a>
+</div>
+{% endblock %}

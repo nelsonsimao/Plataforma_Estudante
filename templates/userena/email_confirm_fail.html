@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Falha na verificação do Email." %}{% endblock %}
+{% block content_title %}<h2>{% trans "O seu email não pôde ser verificado..." %}</h2>{% endblock %}
+
+{% block content %}
+<p>{% trans "O seu email não pôde ser verificado..." %}</p>
+<p>{% trans "Poderá tentar alterá-lo novamento na propriedades de conta." %}</p>
+{% endblock %}

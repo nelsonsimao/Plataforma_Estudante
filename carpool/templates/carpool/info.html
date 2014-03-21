@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+{% block content %}
+<h1>Carpool</h1>
+<div class="row">
+<div class="span2"></div>
+</div>
+<p>Descrição: {{ boleia.descricaoOferece }}<br>
+Origem: {{ boleia.origemOferece }}<br>
+Destino: {{ boleia.destinoOferece }}<br>
+Lugares: {{ boleia.lugaresOferece }}<br>
+Preço: {{ boleia.custo }}<br>
+Tipo de Combustível: {{ boleia.tipo_combustivel }}<br>
+<br>
+Anunciante: {{ boleia.userNameC.user}}<br>
+</p>
+<div class="row"></div>
+<div class="span2">
+	<a href="/messages" class="btn btn-danger">Enviar mensagem</a>
+</div>
+{% endblock %}
+
+{% block footer %}
+<br>
+<br>
+<br>
+<div class="span2">
+	<a href="../" class="btn btn-danger">Voltar</a>
+</div>
+<br>
+<br>
+<br>
+<div class="span2">
+	<a href="/accounts/signout" class="btn btn-danger">Logout</a>
+</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+{% block content %}
+<h1>Alojamentos</h1>
+<div class="row">
+<div class="span2"></div>
+</div>
+<p>Descrição: {{ alojamento.descricao}}<br>
+Bairro: {{ alojamento.bairro}}<br>
+Quartos: {{ alojamento.quartos}}<br>
+Sala: {{ alojamento.sala}}<br>
+Casa de banho: {{ alojamento.wc}}<br>
+Renda: {{ alojamento.renda}}<br>
+Animais: {{ alojamento.animais}}<br>
+Género: {{ alojamento.genero}}<br>
+Disponível em: {{ alojamento.mes}}<br>
+<br>
+Anunciante: {{alojamento.userName.user}}<br>
+</p>
+<div class="row"></div>
+<div class="span2">
+	<a href="/messages" class="btn btn-danger">Enviar mensagem</a>
+</div>
+{% endblock %}
+
+
+{% block footer %}
+<br>
+<br>
+<br>
+<div class="span2">
+	<a href="../" class="btn btn-danger">Voltar</a>
+</div>
+<br>
+<br>
+<br>
+<div class="span2">
+	<a href="/accounts/signout" class="btn btn-danger">Logout</a>
+</div>
+{% endblock %}

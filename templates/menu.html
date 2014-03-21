@@ -1,0 +1,25 @@
+{% extends "index.html" %} 
+
+{% block content %}
+<h1>Menu</h1>
+<br>
+<br>
+<br>
+<div class="row">
+	<div class="span2 offset5">
+		<a href="/carpool" class="btn btn-default" type="button">CARPOOL</a>
+	</div>
+	<div class="span2 offset1">
+		<a href="/alojamentos" class="btn btn-default" type="button">ALOJAMENTOS</a>
+	</div>
+</div>
+
+{% endblock %}
+{% block footer %}
+<br>
+<br>
+<br>
+<div class="span2">
+	<a href="/accounts/signout" class="btn btn-danger">Logout</a>
+</div>
+{% endblock %}

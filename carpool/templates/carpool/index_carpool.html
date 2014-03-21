@@ -1,0 +1,42 @@
+{% extends "index.html" %} 
+
+{% block content %}
+<h1>Carpool</h1>
+<div class="row3">
+	<div class="span"></div>
+	<div class="span">
+		<a href="/carpool/adicionar_boleia" class="btn btn-default" type="button">Adicionar
+			boleia</a>
+	</div>
+</div>
+{% if latest_carpool_list%} 
+{% for carpool in latest_carpool_list %}
+<div class="row-fluid">
+
+	<div class="span6 offset3">
+		<div class="well">
+				<p>
+					<a href="/carpool/{{ carpool.id }}/">Descrição: {{ carpool.descricaoOferece}}</a><br>
+					Origem: {{ carpool.origemOferece}}  Destino: {{ carpool.destinoOferece}}<br>
+					Data: {{ carpool.dia}}   Hora: {{ carpool.hora}}<br>
+					Lugares: {{	carpool.lugaresOferece}}    Preço: {{ carpool.custo}}<br>
+					Tipo de Combustível: {{ carpool.tipo_combustivel}}<br>
+					<br>
+					Anunciante: {{ carpool.userNameC.user}}
+				</p>
+		</div>
+	</div>
+</div>
+{% endfor %} 
+{% else %}
+<p>Não há boleias disponíveis!</p>
+{% endif %} 
+{% endblock %}
+{% block footer %}
+<br>
+<br>
+<br>
+<div class="span2">
+	<a href="/accounts/signout" class="btn btn-danger">Logout</a>
+</div>
+{% endblock %}
